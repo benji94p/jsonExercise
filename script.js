@@ -1,4 +1,5 @@
 let link = "movies.json";
+let container = document.querySelector('.container');
 
 console.log(link);
 
@@ -16,3 +17,11 @@ function getData(link){
 }
 
 getData(link);
+
+let movieTemplate = document.querySelector('.templateMovie').content;
+
+function createMovieCard(cat) {
+    let cloneMovies = movieTemplate.cloneNode(true);
+    cloneMovies.querySelector('.title').textContent = cat;
+    container.appendChild(cloneMovies);
+}
