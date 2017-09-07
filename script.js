@@ -20,8 +20,14 @@ getData(link);
 
 let movieTemplate = document.querySelector('.templateMovie').content;
 
-function createMovieCard(cat) {
+function createMovieCard(card) {
+    console.log(link);
     let cloneMovies = movieTemplate.cloneNode(true);
-    cloneMovies.querySelector('.title').textContent = cat;
+    cloneMovies.querySelector('.title').textContent = card.title;
+    cloneMovies.querySelector('.length').textContent = card.length;
+    cloneMovies.querySelector('.gender').textContent = card.gender;
+    cloneMovies.querySelector('.des').textContent = card.des;
+    cloneMovies.querySelector('.director').textContent = card.director;
+    cloneMovies.querySelector('.stars').textContent = card.stars;
     container.appendChild(cloneMovies);
 }
